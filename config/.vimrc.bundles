@@ -1,0 +1,135 @@
+set nocompatible        " Must be first line
+set background=dark     " Assume a dark background
+
+"for vim-plug
+let g:plug_threads = 50
+let g:plug_url_format = "https://github.com/%s.git"
+
+let g:plugin_go = 1
+let g:plugin_python = 1
+let g:plugin_js = 1
+let g:plugin_html = 1
+
+call plug#begin('~/.vim/plugged')
+"----------- general -----------
+Plug '~/.vim/vim-plug/autoload/plug.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'altercation/vim-colors-solarized'
+Plug 'spf13/vim-colors'
+Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-repeat'
+Plug 'jiangmiao/auto-pairs'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'kristijanhusak/vim-multiple-cursors'
+Plug 'Alex-duzhichao/sessionman.vim'
+Plug 'Alex-duzhichao/matchit.vim'
+Plug 'Alex-duzhichao/lib.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'powerline/fonts'
+Plug 'bling/vim-bufferline'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'flazz/vim-colorschemes'
+" Plug 'mbbill/undotree'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Alex-duzhichao/restore_view.vim'
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-abolish'
+Plug 'osyo-manga/vim-over'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent'
+Plug 'gcmt/wildfire.vim'
+Plug 'vim-airline/vim-airline-themes'
+
+"----------- writeing -----------
+Plug 'tpope/vim-markdown'
+Plug 'reedes/vim-litecorrect'
+Plug 'reedes/vim-textobj-sentence'
+Plug 'reedes/vim-textobj-quote'
+Plug 'reedes/vim-wordy'
+
+"----------- general programming ---------
+" Pick one of the checksyntax, jslint, or syntastic
+" Plug 'scrooloose/syntastic'
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-fugitive'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
+Plug 'scrooloose/nerdcommenter'
+" Plug 'tpope/vim-commentary'
+Plug 'godlygeek/tabular'
+Plug 'myusuf3/numbers.vim'
+" Plug 'chazy/cscope_maps'
+" Plug 'Alex-duzhichao/taglist.vim'
+Plug 'Alex-duzhichao/a.vim'
+Plug 'inkarkat/vim-ingo-library'
+Plug 'Alex-duzhichao/mark.vim'
+" Plug 'Alex-duzhichao/SearchComplete'
+" Plug 'jlanzarotta/bufexplorer'
+Plug 'Alex-duzhichao/DoxygenToolkit.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'dyng/ctrlsf.vim'
+Plug 'derekwyatt/vim-fswitch' 
+Plug 'derekwyatt/vim-protodef'
+Plug 'kshenoy/vim-signature'
+Plug 'Alex-duzhichao/h2cppx'
+Plug 'Alex-duzhichao/headerguard.vim'
+Plug 'Alex-duzhichao/vim-fanfingtastic'
+Plug 'majutsushi/tagbar'
+Plug 'honza/vim-snippets'
+Plug 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+
+"------------- PHP -----------------
+if exists('g:plugin_php')
+Plug 'spf13/PIV'
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'beyondwords/vim-twig'
+endif
+
+"------------ Python ----------------
+if exists('g:plugin_python')
+" Pick either python-mode or pyflakes & pydoc
+Plug 'klen/python-mode'
+Plug 'yssource/python.vim'
+Plug 'vim-scripts/python_match.vim'
+Plug 'vim-scripts/pythoncomplete'
+Plug 'Vimjas/vim-python-pep8-indent'
+endif
+
+"------------ Javascript -------------
+if exists('g:plugin_js')
+Plug 'elzr/vim-json'
+Plug 'groenewege/vim-less'
+Plug 'pangloss/vim-javascript'
+Plug 'briancollins/vim-jst'
+Plug 'kchmck/vim-coffee-script'
+endif
+
+"---------------- HTML ------------
+if exists('g:plugin_html')
+Plug 'heracek/HTML-AutoCloseTag'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'ap/vim-css-color'
+Plug 'tpope/vim-haml'
+endif
+
+"---------------- Go ---------------
+if exists('g:plugin_go')
+Plug 'Blackrush/vim-gocode'
+Plug 'fatih/vim-go'
+endif
+
+"-------------- Misc ---------------
+" Plug 'rust-lang/rust.vim'
+"Plug 'spf13/vim-preview'
+"cucumber is a test framwork
+" Plug 'tpope/vim-cucumber'
+" Plug 'quentindecock/vim-cucumber-align-pipes'
+"toml aims to be a minimal configuration file format
+" Plug 'cespare/vim-toml'
+" saltstack is a configure management
+" Plug 'saltstack/salt-vim'
+
+call plug#end()
